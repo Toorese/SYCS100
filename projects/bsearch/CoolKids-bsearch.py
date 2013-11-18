@@ -54,3 +54,37 @@ if isitFound:
 	print List.index(Item)
 else:
 	print -1
+	
+	
+	
+	
+	
+	
+	
+	
+#Oluwatoorese S Lasebikan
+#@02720942
+#SYCS group assignment
+#Binary Search assignment
+
+def binarys(Item, List):
+        find = False
+        down = 0
+        	up = len(List)-1
+        while down <= up and find:
+                mid = (down + up)//2
+                if List[mid]== Item:
+                        find = True
+                elif List[mid] < Item:
+                        up = mid - 1
+                else :
+                        down = mid + 1
+        return find
+
+List = sorted([47,48,19,37,63,34,43,77])
+Item = 7
+isitfind = binarys(Item, List)
+if isitfind:
+        print List.index(Item)
+else:
+        print -1	
